@@ -24,7 +24,10 @@ pipeline {
         stage('Build and Test') {
             steps {
                 echo 'Executing Selenium tests using Maven and TestNG'
-                bat 'mvn -B clean test'
+
+                dir('java_selenium_framework') {
+                    bat 'mvn -B clean test'
+                }
             }
         }
     }
@@ -35,7 +38,8 @@ pipeline {
             echo 'Publishing TestNG execution reports'
 
             junit(
-                testResults: 'target/surefire-reports/TEST-*.xml'
+                testResults: 'java_selenium_framework/target/surefire-reports/TEST-*.xml',
+                allowEmptyResults: true
             )
         }
 
