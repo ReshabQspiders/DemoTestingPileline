@@ -47,3 +47,4 @@ pipeline {
             echo 'Selenium automation pipeline failed'
         }
     }
+}
