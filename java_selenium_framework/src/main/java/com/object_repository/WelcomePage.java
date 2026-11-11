@@ -13,7 +13,7 @@ public class WelcomePage {
 	}
 	@FindBy(linkText  = "Log in")
 	private WebElement loginLink;
-	@FindBy(css="[class='account']")
+	@FindBy(xpath="//a[@class='account' and .='test90199@gmail.com']")
 	private WebElement registeredEmail;
 	public WebElement getLoginLink() {
 		return loginLink;
