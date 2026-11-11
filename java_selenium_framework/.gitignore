@@ -1,1 +1,20 @@
-/target/
+# Maven build directory
+target/
+
+# TestNG reports
+test-output/
+
+# Execution screenshots
+Screenshots/
+
+# Eclipse files
+.metadata/
+.settings/
+
+# IntelliJ files
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
